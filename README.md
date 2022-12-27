@@ -15,3 +15,13 @@ copy script code('</>') 를 클릭해서 html에 붙여넣기해서 사용하면
 
 ![image](https://user-images.githubusercontent.com/103080228/209610183-3cf66742-aa2c-4b79-b56f-46da924e7b78.png)
 
+```javascript
+const badgeEl = document.querySelector("header .badges");
+window.addEventListener('scroll', _.throttle(function () {console.log('scroll!');}
+, 300));
+```
+
+_.throttle(함수, 시간) 을 사용하면 정해준 시간만큼 실행되는 것에 부하를 준다.
+
+
+
