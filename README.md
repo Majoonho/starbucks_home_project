@@ -15,19 +15,20 @@ copy script code('</>') 를 클릭해서 html에 붙여넣기해서 사용하면
 
 ![image](https://user-images.githubusercontent.com/103080228/209610183-3cf66742-aa2c-4b79-b56f-46da924e7b78.png)
 
-```javascript
+```js
 const badgeEl = document.querySelector("header .badges");
 window.addEventListener('scroll', _.throttle(function () {console.log('scroll!');}
 , 300));
 ```
 
 _.throttle(함수, 시간) 을 사용하면 정해준 시간만큼 실행되는 것에 부하를 준다.
-
+<br><br>
+<br><br>
 
 ## GSAP & ScrollToPlugin
 
-GSAP(The GreenSock Animation Platform)(https://greensock.com/gsap/) - 자바스크립트로 제어하는 타임라인 기반의 애니메이션 라이브러리.
-[ScrollToPlugin](https://greensock.com/scrolltoplugin/)은 스크롤 애니메이션을 지원하는 GSAP 플러그인입니다.
+  - GSAP(The GreenSock Animation Platform)(https://greensock.com/gsap/) - 자바스크립트로 제어하는 타임라인 기반의 애니메이션 라이브러리.
+[ScrollToPlugin](https://greensock.com/scrolltoplugin/)은 스크롤 애니메이션을 지원하는 GSAP 플러그인.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -56,8 +57,26 @@ window.addEventListener('scroll', _.throttle(function () {
   };
   }, 300));
 ```
+
 ![image](https://user-images.githubusercontent.com/103080228/209625175-4f480e42-4982-444e-9776-ff4eefe7c351.png)
 
 위에 표시된 부분이 사라졌다가 나타나는 효과를 낼 수 있다.
+
+
+  - GSAP을 이용한 순차적으로 사라지는 그림.
+
+```js
+// section 스타벅스 그림 순차적으로 나타내기
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+console.log(fadeEls)
+fadeEls.forEach(function(fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .6, //0.7 1.4 2.1 2.7 초후에 나오게 됨.
+    opacity: 1
+  });
+});
+```
+
 
 
