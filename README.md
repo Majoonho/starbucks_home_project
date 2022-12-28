@@ -77,6 +77,12 @@ fadeEls.forEach(function(fadeEl, index) {
   });
 });
 ```
+<br><br>
+<br><br>
 
+## SWIPER 
+  - Swiper는 하드웨어 가속 전환과 여러 기본 동작을 갖춘 현대적인 슬라이드 라이브러리. (여기서는 슬라이드 기능사용)
+  - 6.버전은 class 를 swiper-container 로 명시하지만 이후 버전에서는 swier 만 명시.
+  - https://swiperjs.com/get-started
 
 
