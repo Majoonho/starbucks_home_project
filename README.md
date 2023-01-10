@@ -1,6 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&text=Welcome!%20&fontSize=60&fontAlignY=40&desc=I'm%20joonho)
 # starbucks_home_project
-
+![image](https://user-images.githubusercontent.com/103080228/211338974-41fddb48-bdbb-45a0-9f66-70c0d1a7da6c.png)
+<br><br>
+<br><br>
 
 ## Lodash
 Lodash (https://lodash.com/) - 다양한 유틸리티 기능을 제공하는 자바스크립트 라이브러리<br>
@@ -84,5 +86,24 @@ fadeEls.forEach(function(fadeEl, index) {
   - Swiper는 하드웨어 가속 전환과 여러 기본 동작을 갖춘 현대적인 슬라이드 라이브러리. (여기서는 슬라이드 기능사용)
   - 6.버전은 class 를 swiper-container 로 명시하지만 이후 버전에서는 swier 만 명시.
   - https://swiperjs.com/get-started
+<br><br>
+<br><br>
+## ScrollMagic
+  - 스타벅스 홈페이지 아래 SEASON PRODUCT/RESERVE COFFEE/PICK YOUR FAVORITE/FIND THE STORE 에 적용.
+  - 양 옆으로 사라지는 효과를 줄 수 있음.
+  
+```js
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function(spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, //보여짐 여부를 감시할 요소를 지정
+      triggerHook: .8
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+});
+```
 
+![image](https://user-images.githubusercontent.com/103080228/211337904-76efd761-c2de-4c99-bb3a-30b10c510192.png)
 
